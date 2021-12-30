@@ -1,6 +1,11 @@
-# CH023 - Eine Bibliothek zum Parsen von Kommandozeilen
+# ArgsAsRoutes
 
-- (A001) Die Bibliothek kann etwas mit einem so formulierten Quelltext anfangen (Beispiel in C#, darf entsprechend der Zielsprache umformuliert werden). 
+A library to parse command line arguments as if they where routes in web applications
+
+## What?
+
+You describe your arguments very similar to the way an application would normally describe its arguments to you.
+Just that you find a $ before everything that you want to extract. 
 
 ```csharp
   var parser = new CommandLineParser(
@@ -22,14 +27,6 @@
   parser.Run();
 ```
 
-- (A002) Das wesentliche hieran ist, dass die Kommandozeilen als Zeichenkette formuliert werden. 
-- (A003) Wenn keine Kommandozeilenparameter angegeben werden, oder -h oder --help, dann wird eine usage-Hilfe angezeigt.
-- (A004) Im Parameter parsedArgs wird an den Ereignishandler eine Möglichkeit übergeben auf die Daten der Parameter zuzugreifen
-- (A005) Es gibt Unit-Tests, die die Fähigkeiten demonstrieren
-  - (A006) Es gibt Validatoren, die an jeden Parameter zusätzlich angehängt werden können, die dann den Inhalt prüfen und ggf. vor der Verarbeitung (Ereignisbehandlung) abbrechen
-  - (A007) Es gibt die Möglichkeit zu Argumenten, z.B. "--ftp", ein Alias anzugeben, z.B. -f .
-  - (A008) "--ignores" ist ein optionaler Parameter, er kann vorhanden sein, muss aber nicht
+If a route is found "complete" the matching delegate is invoked.
 
-## Zusatzanforderungen
-
-Es gelten die generellen Zusatzanforderungen aus [Generelle-Zusatzanforderungen.md](../Generelle-Zusatzanforderungen.md).
+- [features and state of implementation](Documentation\Requirements.md)
