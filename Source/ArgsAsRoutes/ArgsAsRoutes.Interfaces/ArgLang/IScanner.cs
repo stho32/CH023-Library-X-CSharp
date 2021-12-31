@@ -1,6 +1,6 @@
 namespace ArgsAsRoutes.Interfaces.ArgLang;
 
-public interface IArgLangScanner
+public interface IScanner
 {
     IToken[] Scan(string code);
 }

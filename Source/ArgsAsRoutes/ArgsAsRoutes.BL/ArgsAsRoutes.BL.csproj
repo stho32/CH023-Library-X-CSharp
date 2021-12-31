@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ArgsAsRoutes.Interfaces\ArgsAsRoutes.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
